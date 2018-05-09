@@ -1,4 +1,5 @@
-## global properties for all properties
+## global properties for application
+## standalone profile is set by default, override with flag: --spring.profiles.active
 spring:
   application:
     name: properties-samples
