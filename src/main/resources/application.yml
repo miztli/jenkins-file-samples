@@ -2,19 +2,28 @@
 spring:
   application:
     name: properties-samples
+  profiles:
+    active: standalone
 
 ---
+
 ## used if no profile is set at application startup
 spring:
-  profiles: default
+  profiles: standalone
 security:
   user:
     password: no password
 server:
   address: localhost
   port: 8080
+db:
+  address: localhost
+  port: 2345
+  name: sample-db
+  password: standalone-password
 
 ---
+
 ## used if profile dev is set at application startup
 ## --spring.profiles.active=dev
 spring:
@@ -25,8 +34,14 @@ security:
 server:
   address: localhost
   port: 8003
+db:
+  address: localhost
+  port: 5432
+  name: sample-db
+  password: dev-password
 
 ---
+
 ## used if profile prod is set at application startup
 ## --spring.profiles.active=prod
 spring:
@@ -37,3 +52,8 @@ security:
 server:
   address: localhost
   port: 8004
+db:
+  address: localhost
+  port: 2312
+  name: sample-db
+  password: prod-password
