@@ -30,5 +30,23 @@ pipeline {
         echo 'Deploying app...'
       }
     }
+    // Handling events
+    post {
+	always {
+	  echo 'Executing always post action'
+        }
+	success {
+  	  echo 'Executing success post action'
+        }
+	unstable {
+	  echo 'Executing unstable post action'
+        }
+        failure {
+	  echo 'Executing failure post action'
+        }
+	changed {
+	  echo 'Executing changed post action'
+	}
+    }
   }
 }
