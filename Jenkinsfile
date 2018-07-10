@@ -7,7 +7,7 @@ pipeline {
       steps {
         echo 'Building app...'
         // Access env variables
-        echo "Running build no. ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        echo "Running build no. ${env.BUILD_ID} with job name: ${env.JOB_NAME} on ${env.JENKINS_URL}"
       }
     }
     stage('Test') {
