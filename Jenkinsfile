@@ -1,4 +1,4 @@
-//Declarative syntax
+// Declarative syntax
 pipeline {
   agent any
   
