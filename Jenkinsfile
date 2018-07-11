@@ -1,6 +1,6 @@
 // Declarative syntax
 pipeline {
-  agent { label 'linux' }
+  agent { label 'testslave' } //Configured in Jenkins > configuration > Cloud > Docker
 
   stages {
     stage('Build') {
