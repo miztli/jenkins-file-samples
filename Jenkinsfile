@@ -1,6 +1,6 @@
 // Declarative syntax
 pipeline {
-  agent { label 'testslave' }
+  agent { label 'linux' }
 
   stages {
     stage('Build') {
